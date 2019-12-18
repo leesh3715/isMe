@@ -28,16 +28,18 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"
-
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+  
   <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/morphext.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/morphext.min.js"></script>
 
 </head>
 
 <body id="page-top">
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
@@ -69,8 +71,9 @@
       <!-- Masthead Avatar Image -->
       <img class="masthead-avatar mb-5" src="img/lsh_blue.JPG" alt="">
       
-      <!-- Masthead Heading -->
-      <h5>끊임 없이 노력하는 개발자가 되고 싶은</h1>
+      <!-- Masthead Heading --> 
+
+      <h5>끊임 없이 <font size ="5"><span id="js-rotating">노력 하는, 성장 하는, 잘 하는, 즐거운</span></font> 개발자가 되고 싶은</h1>
         <hr>
         <h1 class="masthead-heading text-uppercase mb-0">이 석 호</h1>
         <!-- Icon Divider -->
@@ -461,7 +464,7 @@ function closeOverlay() {
                     작업 인원: 3명<br>
                     작품 소개<br>
                     SPRING Framework를 활용하여 
-                    젊은 청춘들의 편한 쉼터를 찾아주는 부동산 중개 사이트 ‘청춘多방’                    
+                    젊은 청춘들의 편한 쉼터를 찾아주는 부동산 중개 사이트 ‘청춘多방’
                    </p>
                    <!-- <a href="https://github.com/leesh3715/Spring_Dabang" target="_blank">깃허브 주소</a><br> -->
                   </b>
@@ -521,6 +524,19 @@ function closeOverlay() {
     </div>
   </div>
 
+  <script>
+    $("#js-rotating").Morphext({
+        // The [in] animation type. Refer to Animate.css for a list of available animations.
+        animation: "bounceIn",
+        // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+        separator: ",",
+        // The delay between the changing of each phrase in milliseconds.
+        speed: 2000,
+        complete: function () {
+            // Called after the entrance animation is executed.
+        }
+    });
+    </script>
   
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
